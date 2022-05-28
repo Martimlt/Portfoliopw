@@ -1,0 +1,21 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+<div>
+  <h2 class="centerTitles">Aqui podes elogiar!</h2>
+  <div class="btnElogio">
+    <a href="{% url 'portfolio:formElogios' %}"
+      ><button class="btn">Adiciona um Elogio!</button></a
+    >
+  </div>
+  <div class="containerElogio">
+    {% for elogio in elogios %}
+    <div>
+      <h3>{{ elogio.primeiroNome }} {{ elogio.ultimoNome }}</h3>
+      <p><b>Data publicação:</b> {{ elogio.data }}</p>
+      <p><b>Trabalhos conjuntos:</b> {{ elogio.trabalho }}</p>
+      <p><b>Elogio:</b> {{ elogio.elogio }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

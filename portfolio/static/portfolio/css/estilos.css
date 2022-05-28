@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.centerTitles{
+    padding:1vw 0vw;
+    margin: 0px;
+    text-align: center;
+}
+
+/* ------------ header -------------- */
+
+header {
+    height: 10vh;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+}
+
+header div {
+    font-size: 2em;
+    text-align: center;
+    margin-left: 2%;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+/* --------- Main layout ----------- */
+
+
+main {
+    background-color: rgb(245, 238, 206);
+    color: black;
+}
+
+
+
+/* ---------- Home ----------- */
+
+.heroImage {
+    display: flex;
+    color: #000000;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heroImage span{
+    font-size: 2em;
+}
+
+
+/* Social media button */
+
+.button1 {
+    font-size: 1.2em;
+    border-radius: 50%;
+    border: 0px;
+    padding: 2px;
+    color: black;
+}
+
+.button1:hover {
+    opacity: 0.7
+}
+
+
+/* Botão */
+
+.btn {
+    background-color: #dadada;
+    border: none;
+    color: rgb(109, 109, 109);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 10px;
+    margin: 1vw 0vw;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    opacity: 0.7
+}
+
+.textDown{
+    text-align: center;
+}
+
+.paddingHome {
+    padding: 2vw 6vw 3vw;
+}
+
+
+
+/* ---------- Apresentação ------------ */
+
+.padding {
+    display: flex;
+    padding: 1vw 8vw 2vw 8vw;
+}
+
+
+.padding > *{
+    flex: 1;
+}
+
+.padding div {
+    padding: 1.2vw 1.5vw;
+}
+
+
+.padding img {
+    border-radius: 5px;
+
+}
+
+.space1{
+    margin-bottom: 6vw;
+}
+
+.space2 {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.hobbies{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3em;
+    padding: 2vw 2vw 3vw;
+}
+
+.hobbies p{
+    font-size: 0.5em;
+}
+
+
+/* ----------- curso ------------ */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 238, 206);
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2vw 3vw;
+}
+
+
+.container div {
+    width: 70vw;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.centerTitlescurso {
+    margin: 0px;
+    text-align: center;
+}
+
+.paddingcurso{
+    padding-top: 3vw;
+    text-align: center;
+}
+
+.paddingcursotext{
+    text-align: center;
+}
+
+.seta{
+    padding: 1vw;
+    text-decoration: none;
+    color: black;
+}
+
+.checked {
+    color: orange;
+}
+
+/* --------- Formação ----------- */
+
+.link{
+    color: #fa8f03;
+    text-decoration: none;
+}
+
+.desporto {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    font-size: 3em;
+    padding: 2vw 2vw;
+}
+
+.maxSize {
+    font-size: 0.5em;
+}
+
+.minSize{
+    font-size: 0.3em;
+}
+
+/* Percurso */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    margin-bottom: 5px;
+}
+
+/* Container around content */
+.percurso {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.percurso::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #fa8f03;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+.content h2{
+    padding: 0;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    .content {
+        padding: 20px 30px;
+        width: 70vw;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+    }
+
+    /* Container around content */
+    .percurso {
+        padding: 10px 50px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+
+    
+}
+
+/* ----------- Projetos ------------ */
+
+.projetos{
+    padding: 3vw 10vw;
+}
+
+.separadoresEsquerda{
+    display: flex;
+    padding-bottom: 2vw;
+    justify-content: center;
+}
+
+.separadoresDireita {
+    display: flex;
+    padding-bottom: 2vw;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.textCompetencias{
+    padding: 1vw;
+}
+
+.btnprojetos{
+    text-align: center;
+}
+
+/* https: //codepen.io/voltagenewmedia/pen/aWKxOg */
+
+/* ----------- Competências ------------- */
+
+.competenciasSpace{
+    padding: 2vw 10vw;
+}
+
+.competencias {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 0.3vw;
+    padding-bottom: 0.3vw;
+    padding-right: 0.3vw;
+    color: white;
+}
+
+.Html {
+    width: 80%;
+    background-color: #fa8f03;
+}
+
+.Css {
+    width: 70%;
+    background-color: #fa8f03;
+}
+
+.Java {
+    width: 90%;
+    background-color: #fa8f03;
+}
+
+.Sql {
+    width: 85%;
+    background-color: #fa8f03;
+}
+
+.Kotlin {
+    width: 70%;
+    background-color: #fa8f03;
+}
+
+.C{
+    width: 65%;
+    background-color: #fa8f03;
+}
+
+
+/* ----------- footer ----------- */
+
+footer {
+    height: 5vh;
+    padding: 0 2vw;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+
+footer div{
+    margin: 10px;
+}
+
+footer p {
+    font-size: 0.7rem;
+}
+
+footer p:last-child {
+    font-size: 0.7rem;
+    padding-bottom: 10px;
+}
+
+/* ---------- Livro Elogios ----------- */
+
+.paddingElogios{
+    padding: 0vw 15vw 2vw;
+}
+
+.title-form-center {
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+.form-center {
+    text-align: center;
+}
+
+.btnElogio{
+    text-align: center;
+}
+
+.linebreak{
+    display: block;
+    height: 25px;
+    width: 100%;
+    margin-bottom: 1vw;
+}
+
+.spaceform{
+    height: 25px;
+    margin-bottom: 1vw;
+}
+
+.linebreakTextArea1{
+    display: block;
+    width: 100%;
+    height: 50px;
+    resize: none;
+    margin-bottom: 1vw;
+}
+
+.linebreakTextArea2 {
+    display: block;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    margin-bottom: 1vw;
+}
+
+
+.containerElogio {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 238, 206);
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2vw 3vw;
+}
+
+/* Não funciona -> meter data à direita */
+.containerElogio p:nth-child(1){
+    float: right;
+}
+
+.containerElogio div {
+    width: 70vw;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+/* ---------- Programação Web ------------- */
+
+.paddingFormPw {
+    padding: 0vw 14vw 2vw;
+}
+
+.paddingTecnologias{
+    padding: 1vw 0vw;
+}
+
+.centextpw{
+    text-align: center;
+}
+
+/*
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+*/
+
+
+/* ------------ Login ------------ */
+
+.pageLogin{
+    height: 90vh;
+}
+
+.loginArea{
+    padding: 10vw 0vw;
+    text-align: center;
+}
+
+.breakLineLogin{
+    text-align: center;
+}
+
+.btnlogout{
+    color: red;
+}

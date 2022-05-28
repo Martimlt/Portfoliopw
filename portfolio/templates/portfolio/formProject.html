@@ -1,0 +1,12 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+
+<a class="fa-solid fa-arrow-left seta" href="{% url 'portfolio:projetos' %}"></a>
+<h2 class="title-form-center">Novo Projeto</h2>
+<section class="paddingElogios">
+  <form class="form-center" method="POST" action="">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Submeter" class="btn" />
+  </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+<a
+  class="fa-solid fa-arrow-left seta"
+  href="{% url 'portfolio:programacaoWeb' %}"
+></a>
+<h2 class="title-form-center">Nova Resposta</h2>
+<section class="paddingElogios">
+    <form class="form-center" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Insira o seu nome" class="linebreak" required><br>
+        <p>Qual a primeira linha de um documento HTML?</p>
+        <input type="radio" id="primeira" name="linha" value="html lang=pt">
+        <label for="primeira">html lang="pt"</label><br>
+        <input type="radio" id="segunda" name="linha" value="html">
+        <label for="segunda">html</label><br>
+        <input type="radio" id="terceira" name="linha" value="!DOCTYPE html">
+        <label for="terceira">!DOCTYPE html</label><br>
+        <input type="radio" id="quarta" name="linha" value="head">
+        <label for="quarta">head</label><br><br>
+        <p>Quail destes não é um tipos de input nos formulários?</p>
+        <input type="radio" id="resposta1" name="resposta" value="text">
+        <label for="resposta1">text</label><br>
+        <input type="radio" id="resposta2" name="resposta" value="checkbox">
+        <label for="resposta2">checkbox</label><br>
+        <input type="radio" id="resposta3" name="resposta" value="question">
+        <label for="resposta3">question</label><br>
+        <input type="radio" id="resposta4" name="resposta" value="radio">
+        <label for="resposta4">radio</label><br><br>
+        <p>Qual é a linguagem utilizada para estilizar um website?</p>
+        <input type="radio" id="primeira" name="estilo" value="Java">
+        <label for="primeira">Java</label><br>
+        <input type="radio" id="segunda" name="estilo" value="JavaScript">
+        <label for="segunda">JavaScript</label><br>
+        <input type="radio" id="terceira" name="estilo" value="css">
+        <label for="terceira">css</label><br>
+        <input type="radio" id="quarta" name="estilo" value="C">
+        <label for="quarta">C</label><br><br>
+        <p>Qual destes não é um beneficios django:</p>
+        <input type="radio" id="opcao1" name="beneficios" value="Seguro">
+        <label for="opcao1">Seguro</label><br>
+        <input type="radio" id="opcao2" name="beneficios" value="Escalavel">
+        <label for="opcao2">Escalável</label><br>
+        <input type="radio" id="opcao3" name="beneficios" value="Rapido">
+        <label for="opcao3">Rápido</label><br>
+        <input type="radio" id="opcao4" name="beneficios" value="Restrito">
+        <label for="opcao4">Restrito</label><br><br>
+        <p>Django é uma framework em:</p>
+        <input type="radio" id="primeira" name="framework" value="C++">
+        <label for="primeira">C++</label><br>
+        <input type="radio" id="segunda" name="framework" value="Java">
+        <label for="segunda">Java</label><br>
+        <input type="radio" id="terceira" name="framework" value="Kotlin">
+        <label for="terceira">Kotlin</label><br>
+        <input type="radio" id="quarta" name="framework" value="Python">
+        <label for="quarta">Python</label><br><br>
+        <input type="submit" value="Submeter" class="btn" />
+    </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/estilos.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="{% url 'portfolio:home' %}"
+          ><img src="{% static 'portfolio/images/Logo.png' %}"
+        /></a>
+      </div>
+      <nav>
+        <a href="{% url 'portfolio:home' %}">Home</a>
+        <a href="{% url 'portfolio:apresentacao' %}">Sobre mim</a>
+        <a href="{% url 'portfolio:projetos' %}">Projetos</a>
+        <a href="{% url 'portfolio:programacaoWeb' %}">Programação Web</a>
+        <a href="{% url 'portfolio:elogios' %}">Livro Elogios</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'portfolio:logout' %}" class="btnlogout">Logout</a>
+        {% else %}
+        <a href="{% url 'portfolio:login' %}">Login</a>
+        {% endif %}
+      </nav>
+    </header>
+    <main>{% block main %} {% endblock main %}</main>
+    <footer>
+      <div>ULHT 2022</div>
+      <p>Contacto: +351 931 327 957</p>
+      <p>Email: mlteixeira2002@gmail.com</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+<h2 class="centerTitles">Projetos</h2>
+<div class="btnprojetos">
+  {% if user.is_authenticated %}
+  <a href="{% url 'portfolio:formprojetos' %}"><button class="btn">Adicionar Projeto</button></a>
+  {% endif %}
+</div>
+<div class="projetos">
+  {% for projeto in projetos %}
+      {% if projeto.left == True %}
+          <div class="separadoresEsquerda">
+              {% load static %}
+              <img src="{% static 'portfolio/images/ProjetoFP.png' %}"/>
+              <div class="textCompetencias">
+                  <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
+                  <p>{{ projeto.descricao }}</p>
+                  <p>Realizado no {{ projeto.ano }}ºano</p>
+                  <p>Colega grupo: {{ projeto.participante }}</p>
+                  <p>Tecnologia utilizada: {{ projeto.tecnologia }}</p>
+                  <p>Competência obtida: {{ projeto.competencia }}</p>
+                  <a href="{{ projeto.linkGit }}" target="_blank"
+                  ><i class="fa-brands fa-github button1"></i
+                  ></a>
+              </div>
+          </div>
+      {% elif projeto.right == True %}
+          <div class="separadoresDireita">
+              {% load static %}
+              <img src="{% static 'portfolio/images/ProjetoFP.png' %}"/>
+              <div class="textCompetencias">
+                  <h3>{{ projeto.titulo }}</h3>
+                  <p>{{ projeto.descricao }}</p>
+                  <p>Realizado no {{ projeto.ano }}ºano</p>
+                  <p>Colega grupo: {{ projeto.participante }}</p>
+                  <p>Tecnologia utilizada: {{ projeto.tecnologia }}</p>
+                  <p>Competência obtida: {{ projeto.competencia }}</p>
+                  <a href="{{ projeto.linkGit }}" target="_blank"
+                  ><i class="fa-brands fa-github button1"></i
+                  ></a>
+              </div>
+          </div>
+      {% endif %}
+  {% endfor %}
+
+
+</div>
+{% endblock %}

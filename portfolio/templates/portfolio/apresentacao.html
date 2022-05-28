@@ -1,0 +1,188 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+<h2 class="centerTitles">Sobre mim</h2>
+<div class="padding">
+  <div>
+    <div class="space1">
+      <h3>Quem sou eu?</h3>
+      <p>O meu nome é Martim Teixeira, tenho 19 anos e sou de Lisboa.</p>
+    </div>
+    <div>
+      <h3>O que pretendo fazer no futuro?</h3>
+      <p>
+        Pretendo tirar um mestrado na área de análise de dados e trabalhar nessa
+        área.
+      </p>
+    </div>
+  </div>
+  {% load static %}
+  <img src="{% static 'portfolio/images/228.jpg' %}" />
+  <div>
+    <div class="space2">
+      <h3>O que faço agora?</h3>
+      <p>
+        Atualmente estou a estudar infotmática de gestão e a trabalhar na
+        empresa Fapil como assistente informático.
+      </p>
+    </div>
+    <div>
+      <h3>Objetivos:</h3>
+      <ul>
+        <li>Ser melhor todos os dias</li>
+        <li>Aprender cada vez mais</li>
+        <li>Ler livros</li>
+        <li>Ser uma pessoa prestável</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 class="centerTitles">Hobbies</h2>
+  <div class="hobbies">
+    <div>
+      <i class="fa-solid fa-car"></i>
+      <p>Conduzir</p>
+    </div>
+    <div>
+      <i class="fa-solid fa-person-walking"></i>
+      <p>Passear</p>
+    </div>
+    <div>
+      <i class="fa-solid fa-utensils"></i>
+      <p>Cozinhar</p>
+    </div>
+  </div>
+</div>
+<section>
+  <h2 class="centerTitles">Percurso</h2>
+  <div class="timeline">
+    <div class="percurso left">
+      <div class="content">
+        <h2>05/2014</h2>
+        <p>Fiz voluntariado na instituição <i>Serve The City</i>.</p>
+      </div>
+    </div>
+    <div class="percurso right">
+      <div class="content">
+        <h2>09/2017</h2>
+        <p>Iniciei o Secundário</p>
+        {% load static %}
+        <p>
+          Escola:
+          <a href="https://escola.esjs-mafra.net/" target="_blank" class="link"
+            >Escola Secundária José Saramago</a
+          >
+        </p>
+        <p>Curso: Ciências Socioeconomicas</p>
+      </div>
+    </div>
+    <div class="percurso left">
+      <div class="content">
+        <h2>01/2019</h2>
+        <p>
+          Obtive o certificado "Linkedin para Profissionais" pela empresa Fenix
+          Digital.
+        </p>
+      </div>
+    </div>
+    <div class="percurso right">
+      <div class="content">
+        <h2>06/2020</h2>
+        <p>Terminei o Secundário</p>
+      </div>
+    </div>
+    <div class="percurso left">
+      <div class="content">
+        <h2>07/2020</h2>
+        <p>
+          Trabalhei na Empresa
+          <a href="https://www.fapil.pt/" target="_blank" class="link">Fapil</a>
+          como Operador de Fábrica.
+        </p>
+      </div>
+    </div>
+    <div class="percurso right">
+      <div class="content">
+        <h2>09/2020</h2>
+        <p>Iniciei o curso de Informática de Gestão</p>
+        <p>
+          Faculdade:
+          <a href="https://www.ulusofona.pt/" target="_blank" class="link"
+            >Universidade Lusófona de Humanidades e Tecnologias</a
+          >
+        </p>
+        <a href="{% url 'portfolio:curso' %}" class="link" id="infg"
+          >Informações curso</a
+        >
+      </div>
+    </div>
+    <div class="percurso left">
+      <div class="content">
+        <h2>02/2022</h2>
+        <p>
+          Comecei a trabalhar na Empresa
+          <a href="https://www.fapil.pt/" target="_blank" class="link">Fapil</a>
+          como Assistente Informático.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="centerTitles">Competencias</h2>
+<div class="competenciasSpace">
+    {% for competencia in competencias %}
+        <p>{{ competencia.competencia }}</p>
+        <div class="competencias">
+            <div class="skills {{ competencia.competencia }}">{{ competencia.valor }}%</div>
+        </div>
+    {% endfor %}
+</div>
+<div>
+  <h2 class="centerTitles">Linguas</h2>
+  <div class="hobbies">
+    <div>
+      <b>PT</b>
+    </div>
+    <div>
+      <b>EN</b>
+    </div>
+    <div>
+      <b>ES</b>
+    </div>
+  </div>
+</div>
+<section>
+  <div>
+    <h2 class="centerTitles">Desportos Praticados</h2>
+    <div class="desporto">
+      <div>
+        <i class="fa-regular fa-futbol"></i>
+        <p class="maxSize">Futebol</p>
+      </div>
+    </div>
+    <div class="desporto">
+      <div>
+        <i class="fa-solid fa-medal"></i>
+        <p class="minSize">
+          Campeão de série<br />2ª Distrital<br />
+          2018
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-trophy"></i>
+        <p class="minSize">
+          Vendecor <br />
+          Aveiro-Cup <br />2018
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-medal"></i>
+        <p class="minSize">
+          Campeão de série<br />
+          2ª Distrital e<br />Subida de<br />Divisão<br />2019
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
