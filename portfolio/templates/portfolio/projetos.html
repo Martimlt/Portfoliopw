@@ -32,14 +32,21 @@
           </div>
       {% elif projeto.right == True %}
           <div class="separadoresDireita">
-              <img src="{% static 'portfolio/images/ProjetoFP.png' %}"/>
+              <img src="{% static 'portfolio/images/ProjetoFP.png' %}" class="imgprojeto"/>
               <div class="textCompetencias">
-                  <h3>{{ projeto.titulo }}</h3>
+                  <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
                   <p>{{ projeto.descricao }}</p>
                   <p>Realizado no {{ projeto.ano }}ºano</p>
-                  <p>Colega grupo: {{ projeto.participante }}</p>
+                  <p>Colega grupo: {{ projeto.participante }} <a href={{ projeto.participante.linkedin }} target="_blank"
+        ><i class="fa-brands fa-linkedin button1"></i
+      ></a> <a href={{ projeto.participante.outroLink }} target="_blank"
+        ><i class="fa-solid fa-heading button1"></i></a></p></p>
                   <p>Tecnologia utilizada: {{ projeto.tecnologia }}</p>
                   <p>Competência obtida: {{ projeto.competencia }}</p>
+                  {% if not projeto.video == '' %}
+                  <a href="{{ projeto.video }}" target="_blank"
+                  ><i class="fa-brands fa-youtube button1"></i></a>
+                  {% endif %}
                   <a href="{{ projeto.linkGit }}" target="_blank"
                   ><i class="fa-brands fa-github button1"></i
                   ></a>
