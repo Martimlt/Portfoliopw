@@ -1,4 +1,5 @@
 {% extends 'portfolio/layout.html' %} {% block main %}
+    {% load static %}
 <h2 class="centerTitles">Projetos</h2>
 <div class="btnprojetos">
   {% if user.is_authenticated %}
@@ -9,7 +10,6 @@
   {% for projeto in projetos %}
       {% if projeto.left == True %}
           <div class="separadoresEsquerda">
-              {% load static %}
               <img src="{% static 'portfolio/images/ProjetoFP.png' %}" class="imgprojeto"/>
               <div class="textCompetencias">
                   <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
@@ -23,7 +23,7 @@
                   <p>Competência obtida: {{ projeto.competencia }}</p>
                   {% if not projeto.video == '' %}
                   <a href="{{ projeto.video }}" target="_blank"
-                  ><i class="fa-brands fa-youtube"></i></a>
+                  ><i class="fa-brands fa-youtube button1"></i></a>
                   {% endif %}
                   <a href="{{ projeto.linkGit }}" target="_blank"
                   ><i class="fa-brands fa-github button1"></i
@@ -32,7 +32,6 @@
           </div>
       {% elif projeto.right == True %}
           <div class="separadoresDireita">
-              {% load static %}
               <img src="{% static 'portfolio/images/ProjetoFP.png' %}"/>
               <div class="textCompetencias">
                   <h3>{{ projeto.titulo }}</h3>
