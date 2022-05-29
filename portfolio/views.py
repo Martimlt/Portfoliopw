@@ -13,7 +13,8 @@ def home_page_view(request):
 
 
 def apresentacao_page_view(request):
-    return render(request, 'portfolio/apresentacao.html')
+    context = {'competencias': Competencia.objects.all()}
+    return render(request, 'portfolio/apresentacao.html',context)
 
 
 def projetos_page_view(request):
@@ -33,7 +34,7 @@ def formprojetos_page_view(request):
 
 
 def curso_page_view(request):
-    context = {'cadeiras': Cadeira.objects.all()}
+    context = {'cadeiras': Cadeira.objects.all(), 'range': range(1, 6)}
     return render(request, 'portfolio/curso.html', context)
 
 
@@ -81,11 +82,6 @@ def logout_view(request):
     return render(request, 'portfolio/login.html', {
         "message": "Logged out."
     })
-
-
-def competencias_view(request):
-    context = {'competencias': Competencia.objects.all()}
-    return render(request, 'portfolio/apresentacao.html', context)
 
 
 def pontuacao_quizz(request):

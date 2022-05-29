@@ -41,14 +41,9 @@ class ProjetoForm(ModelForm):
             'titulo': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o título'}),
             'descricao': forms.Textarea(attrs={'class': 'linebreakTextArea2', 'placeholder': 'Insira a descrição'}),
             'linkGit': forms.URLInput(attrs={'class': 'linebreak','placeholder': 'Insira o link'}),
-            'cadeira': forms.TextInput(attrs={'class': 'spaceform','placeholder': 'Insira a cadeira'}),
             'ano': forms.NumberInput(attrs={'class': 'spaceform','placeholder': 'Insira o ano'}),
             'imagem': forms.FileInput(attrs={'class': 'spaceform','placeholder': 'Insira o seu primeiro nome'}),
             'tecnologia': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira a tecnologia'}),
-            'participante': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o colega'}),
-            'competencia': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira a competencia'}),
-            'left': forms.TextInput(attrs={'class': 'spaceform'}),
-            'right': forms.TextInput(attrs={'class': 'spaceform'}),
         }
 
         # texto a exibir junto à janela de inserção

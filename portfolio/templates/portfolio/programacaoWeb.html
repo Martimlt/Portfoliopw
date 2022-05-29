@@ -1,22 +1,6 @@
 {% extends 'portfolio/layout.html' %} {% block main %}
 <div class="paddingFormPw">
   <h2 class="centerTitles">Programação Web</h2>
-  <h3 class="centerTitles">Quizz</h3>
-  <p class="centextpw">
-    Aqui podes responder a um simples quizz sobre Programação Web!
-  </p>
-  <div class="btnElogio">
-    <a href="{% url 'portfolio:quizz' %}"
-      ><button class="btn">Responder ao Quizz</button></a
-    >
-  </div>
-    <h3 class="centextpw paddingTecnologias">
-    Resultados Quizz
-  </h3>
-    <div class="centextpw">
-        {% load static %}
-        <img src="{% static 'portfolio/images/resultado.png' %}" />
-    </div>
   <h3 class="centerTitles">Tecnologias Existentes</h3>
   <div class="paddingTecnologias">
     <h4>Front-End</h4>
@@ -44,68 +28,53 @@
       <li>C#</li>
     </ul>
   </div>
-  <h3 class="centerTitles">Sobre este Website</h3>
-  <div class="paddingTecnologias">
-    <h4>Estrutura</h4>
-    <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
-  </div>
-  <div class="paddingTecnologias">
-    <h4>Diagrama DER</h4>
-    <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
-  </div>
-  <h4>Tecnologias Utilizadas</h4>
-  <div class="paddingTecnologias">
-    <h4>Front-End</h4>
-    <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
-  </div>
-  <div class="paddingTecnologias">
-    <h4>Back-End</h4>
-    <p>As tecnologias de back-end utilizadas são o django e o python</p>
-  </div>
-  <h3 class="centerTitles">Laboratórios</h3>
-  <div>
-    <div>
-      <details>
-        <summary>Laboratório 1</summary>
-        <p>
-          <a href="lab1/index.html"
-            >Conhecer a Internet com a minha primeira página Web</a
-          >
-        </p>
-      </details>
-      <br />
-      <details>
-        <summary>Laboratório 2</summary>
-        <p>
-          <a href="lab2/index.html"
-            >Explorando o HTML com o meu primeiro website</a
-          >
-        </p>
-      </details>
-      <br />
-      <details>
-        <summary>Laboratório 3</summary>
-        <p>
-          <a href="lab3/index.html">Website com Quizz e seletores CSS</a>
-        </p>
-      </details>
-      <br />
-      <details>
-        <summary>Laboratório 4</summary>
-        <p>
-          <a href="lab4/index.html"
-            >SPA com layout responsivo baseado em Flexbox e Grid</a
-          >
-        </p>
-      </details>
-      <br />
-      <details>
-        <summary>Laboratório 5</summary>
-        <p>
-          <a href="lab5/index.html">SPA com boas práticas de web design</a>
-        </p>
-      </details>
+    <h3 class="centerTitles">Sobre este Website</h3>
+    <div class="paddingTecnologias">
+        <h4>Estrutura</h4>
+        <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
     </div>
-  </div>
+    <div class="paddingTecnologias">
+        <h4>Diagrama DER</h4>
+        <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
+    </div>
+    <h4>Tecnologias Utilizadas</h4>
+    <div class="paddingTecnologias">
+        <h4>Front-End</h4>
+        <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
+    </div>
+    <div class="paddingTecnologias">
+        <h4>Back-End</h4>
+        <p>A tecnologia de back-end utilizada foi o python</p>
+    </div>
+    <div class="paddingTecnologias">
+        <h4>Framework</h4>
+        <p>A framework utilizada para desenvolver este website foi o Django</p>
+    </div>
+  <h3 class="centerTitles">Laboratórios</h3>
+    <div class="centextpw">
+        <p>Aqui podes encontrar a página que contem todos os laboratórios relizados ao longo do semestre</p>
+        <div class="btnElogio">
+            {% load static %}
+            <a href="https://a22006053-labs.herokuapp.com/" target="_blank"
+            ><button class="btn">Laboratórios</button></a
+            >
+        </div>
+    </div>
+    <h3 class="centerTitles">Quizz</h3>
+    <p class="centextpw">
+        Aqui podes responder a um simples quizz sobre Programação Web!
+    </p>
+    <div class="btnElogio">
+        <a href="{% url 'portfolio:quizz' %}"
+        ><button class="btn">Responder ao Quizz</button></a
+        >
+    </div>
+    <h3 class="centextpw paddingTecnologias">
+        Resultados Quizz
+    </h3>
+    <div class="centextpw">
+        {% load static %}
+        <img src="{% static 'portfolio/images/resultado.png' %}" class="imgpw"/>
+    </div>
 </div>
 {% endblock %}
