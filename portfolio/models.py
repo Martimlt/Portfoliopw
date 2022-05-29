@@ -36,7 +36,7 @@ class Cadeira(models.Model):
     linklusofona = models.URLField()
 
     def __str__(self):
-        return self.nome
+        return f"{self.nome}"
 
 
 class Projeto(models.Model):
