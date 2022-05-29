@@ -12,6 +12,10 @@ def home_page_view(request):
     return render(request, 'portfolio/home.html')
 
 
+def contacto_page_view(request):
+    return render(request, 'portfolio/contacto.html')
+
+
 def apresentacao_page_view(request):
     context = {'competencias': Competencia.objects.all()}
     return render(request, 'portfolio/apresentacao.html',context)

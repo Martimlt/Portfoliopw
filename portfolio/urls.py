@@ -17,4 +17,5 @@ urlpatterns = [
     path('quizz', views.quizz_view, name='quizz'),
     path('login', views.login_view, name='login'),
     path('logout', views.logout_view, name='logout'),
+    path('contacto', views.contacto_page_view, name='contacto'),
 ]

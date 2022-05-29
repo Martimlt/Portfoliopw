@@ -593,28 +593,6 @@ footer p:last-child {
     height: auto;
 }
 
-/*
-
-a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-*/
-
 
 /* ------------ Login ------------ */
 
@@ -633,4 +611,11 @@ a:active {
 
 .btnlogout{
     color: red;
+}
+
+
+/* ------------ Contactos ------------ */
+
+.paddingcontactos{
+    padding: 3vw 0vw;
 }
