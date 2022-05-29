@@ -10,7 +10,7 @@
       {% if projeto.left == True %}
           <div class="separadoresEsquerda">
               {% load static %}
-              <img src="{% static 'portfolio/images/ProjetoFP.png' %}"/>
+              <img src="{% static 'portfolio/images/ProjetoFP.png' %}" class="imgprojeto"/>
               <div class="textCompetencias">
                   <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
                   <p>{{ projeto.descricao }}</p>
