@@ -5,6 +5,16 @@
 ></a>
 <div class="centerTitlescurso">
   <h2>Informática de gestão</h2>
+    <p class="paddingInitialTextCurso">A licenciatura de Informática de Gestão procura colmatar uma
+        necessidade cada vez maior nas organizações de aproximar as
+        áreas de negócio (Marketing, Vendas, Operações, etc.) com uma
+        das áreas principais de suporte estratégico, os Sistemas de
+        Informação. As linguagens destas áreas são diferentes, pelo que
+        apenas colaboradores capazes de entender a forma como as empresas
+        se estruturam e posicionam nos seus mercados, associado a
+        conhecimentos tecnológicos, poderão potenciar um perfeito
+        alinhamento Tecnologia-Negócio. Este é o foco de quem realiza
+        a licenciatura de Informática de Gestão.</p>
   <h2>Ano Atual: 2º ano</h2>
 </div>
 <h3 class="paddingcurso">1º ano</h3>
@@ -69,13 +79,20 @@
 <div class="container">
   {% for cadeira in cadeiras %} {% if cadeira.ano == 3 %}
   <div>
-    <b>{{ cadeira.nome }}</b>
+    <b>{{ cadeira.nome }} <a href={{ cadeira.linklusofona }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a></b>
     <p>{{ cadeira.descricao }}</p>
     <p>{{ cadeira.semestre }}º semestre</p>
     <p>Ects: {{ cadeira.ects }}</p>
-    <p>Professor: {{ cadeira.professor.first }}</p>
-    {% if not cadeira.professor.first == cadeira %}
-    <p>Professor auxiliar: {{ cadeira }}</p>
+    <p>Professor: {{ cadeira.professor.primeiroNome }} {{ cadeira.professor.ultimoNome }} <a href={{ cadeira.professor.linkedin }} target="_blank"
+        ><i class="fa-brands fa-linkedin button1"></i
+      ></a> <a href={{ cadeira.professor.outroLink }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a></p>
+    {% if not cadeira.professor.linkedin == cadeira.professorAuxiliar.linkedin %}
+    <p>Professor: {{ cadeira.professorAuxiliar.primeiroNome }} {{ cadeira.professorAuxiliar.ultimoNome }} <a href={{ cadeira.professorAuxiliar.linkedin }} target="_blank"
+        ><i class="fa-brands fa-linkedin button1"></i
+      ></a> <a href={{ cadeira.professorAuxiliar.outroLink }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a></p>
     {% endif %}
     {% for x in range %}
         {% if x <= cadeira.ranking %}
