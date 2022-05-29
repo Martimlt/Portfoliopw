@@ -15,7 +15,16 @@
     <p>{{ cadeira.descricao }}</p>
     <p>{{ cadeira.semestre }}º semestre</p>
     <p>Ects: {{ cadeira.ects }}</p>
-
+    <p>Professor: {{ cadeira.professor.primeiroNome }} {{ cadeira.professor.ultimoNome }} <a href={{ cadeira.professor.linkedin }} target="_blank"
+        ><i class="fa-brands fa-linkedin button1"></i
+      ></a> <a href={{ cadeira.professor.outroLink }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a></p>
+    {% if not cadeira.professor.linkedin == cadeira.professorAuxiliar.linkedin %}
+    <p>Professor: {{ cadeira.professorAuxiliar.primeiroNome }} {{ cadeira.professorAuxiliar.ultimoNome }} <a href={{ cadeira.professorAuxiliar.linkedin }} target="_blank"
+        ><i class="fa-brands fa-linkedin button1"></i
+      ></a> <a href={{ cadeira.professorAuxiliar.outroLink }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a></p>
+    {% endif %}
     {% for x in range %}
         {% if x <= cadeira.ranking %}
             <span class="fa fa-star checked"></span>
@@ -34,7 +43,10 @@
     <p>{{ cadeira.descricao }}</p>
     <p>{{ cadeira.semestre }}º semestre</p>
     <p>Ects: {{ cadeira.ects }}</p>
-
+    <p>Professor: {{ cadeira.professor.first }}</p>
+    {% if not cadeira.professor.first == cadeira %}
+    <p>Professor auxiliar: {{ cadeira }}</p>
+    {% endif %}
     {% for x in range %}
         {% if x <= cadeira.ranking %}
             <span class="fa fa-star checked"></span>
@@ -53,7 +65,10 @@
     <p>{{ cadeira.descricao }}</p>
     <p>{{ cadeira.semestre }}º semestre</p>
     <p>Ects: {{ cadeira.ects }}</p>
-
+    <p>Professor: {{ cadeira.professor.first }}</p>
+    {% if not cadeira.professor.first == cadeira %}
+    <p>Professor auxiliar: {{ cadeira }}</p>
+    {% endif %}
     {% for x in range %}
         {% if x <= cadeira.ranking %}
             <span class="fa fa-star checked"></span>
