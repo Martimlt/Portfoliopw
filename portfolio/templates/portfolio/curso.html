@@ -11,7 +11,8 @@
 <div class="container">
   {% for cadeira in cadeiras %} {% if cadeira.ano == 1 %}
   <div>
-    <b>{{ cadeira.nome }}</b>
+    <b>{{ cadeira.nome }} <a href={{ cadeira.linklusofona }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a></b>
     <p>{{ cadeira.descricao }}</p>
     <p>{{ cadeira.semestre }}º semestre</p>
     <p>Ects: {{ cadeira.ects }}</p>
