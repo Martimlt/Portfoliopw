@@ -74,3 +74,14 @@ class PontuacaoQuizz(models.Model):
     def __str__(self):
         return f"{self.nome}"
 
+
+class Noticia(models.Model):
+    titulo = models.CharField(max_length=100)
+    corpo = models.CharField(max_length=500)
+    autor = models.CharField(max_length=50)
+    data = models.DateField(auto_created=False)
+    urlnoticia = models.URLField()
+
+    def __str__(self):
+        return f"{self.titulo}"
+

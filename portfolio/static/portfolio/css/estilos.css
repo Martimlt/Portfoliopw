@@ -642,3 +642,22 @@ footer p:last-child {
     padding-left: 12vw;
     padding-right: 13vw;
 }
+
+/* -------- noticias -------- */
+
+.containerNoticias {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 238, 206);
+    flex-flow: row wrap;
+    padding: 2vw 2vw;
+}
+
+.containerNoticias div {
+    width: 20vw;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}

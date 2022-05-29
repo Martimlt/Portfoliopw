@@ -3,7 +3,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from matplotlib import pyplot as plt
 
-from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz
+from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz, Noticia
 from portfolio.forms import ElogiosForm, ProjetoForm
 
 
@@ -59,7 +59,8 @@ def formElogios_page_view(request):
 
 
 def programacaoWeb_page_view(request):
-    return render(request, 'portfolio/programacaoWeb.html')
+    context = {'noticias': Noticia.objects.all()}
+    return render(request, 'portfolio/programacaoWeb.html', context)
 
 
 def formPW_page_view(request):

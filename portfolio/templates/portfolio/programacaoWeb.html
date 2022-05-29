@@ -38,7 +38,6 @@
         <h4>Diagrama DER</h4>
         <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
     </div>
-    <h4>Tecnologias Utilizadas</h4>
     <div class="paddingTecnologias">
         <h4>Front-End</h4>
         <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
@@ -59,6 +58,18 @@
             ><button class="btn">Laboratórios</button></a
             >
         </div>
+    </div>
+    <h3 class="centerTitles">Notícias</h3>
+    <div class="containerNoticias">
+        {% for noticia in noticias %}
+            <div>
+                <b><a href={{ noticia.urlnoticia }} target="_blank"
+        ><i class="fa-solid fa-link button1"></i></a> {{ noticia.titulo }} </b>
+                <p>{{ noticia.corpo }}</p>
+                <p>Autor: {{ noticia.autor }}</p>
+                <p>Data Publicação: {{ noticia.data }}</p>
+            </div>
+        {% endfor %}
     </div>
     <h3 class="centerTitles">Quizz</h3>
     <p class="centextpw">
