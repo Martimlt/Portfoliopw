@@ -49,6 +49,7 @@ class Projeto(models.Model):
     tecnologia = models.CharField(max_length=100)
     participante = models.ForeignKey(Pessoa, on_delete=models.CASCADE, related_name='+')
     competencia = models.ForeignKey(Competencia, on_delete=models.CASCADE, related_name='+')
+    youtube = models.URLField(blank=True)
     left = models.BooleanField(default=False)
     right = models.BooleanField(default=False)
 
