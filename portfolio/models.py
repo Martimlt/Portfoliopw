@@ -31,8 +31,9 @@ class Cadeira(models.Model):
     semestre = models.IntegerField()
     ects = models.IntegerField()
     ranking = models.IntegerField()
-    professor = models.ManyToManyField(Pessoa)
-    professorAuxiliar = models.ManyToManyField(Pessoa, related_name='+')
+    professor = models.ForeignKey(Pessoa, on_delete=models.CASCADE)
+    professorAuxiliar = models.ForeignKey(Pessoa, on_delete=models.CASCADE, related_name='+')
+    linklusofona = models.URLField()
 
     def __str__(self):
         return self.nome
@@ -42,12 +43,12 @@ class Projeto(models.Model):
     titulo = models.CharField(max_length=100)
     descricao = models.CharField(max_length=500)
     linkGit = models.URLField(max_length=500)
-    cadeira = models.ForeignKey(Cadeira, on_delete=models.CASCADE, related_name='+')
+    cadeira = models.ForeignKey(Cadeira, on_delete=models.CASCADE)
     ano = models.IntegerField()
     imagem = models.ImageField()
     tecnologia = models.CharField(max_length=100)
-    participante = models.ForeignKey(Pessoa, on_delete=models.CASCADE)
-    competencia = models.ForeignKey(Competencia, on_delete=models.CASCADE)
+    participante = models.ForeignKey(Pessoa, on_delete=models.CASCADE, related_name='+')
+    competencia = models.ForeignKey(Competencia, on_delete=models.CASCADE, related_name='+')
     left = models.BooleanField(default=False)
     right = models.BooleanField(default=False)
 
