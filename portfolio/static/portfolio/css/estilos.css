@@ -617,5 +617,27 @@ footer p:last-child {
 /* ------------ Contactos ------------ */
 
 .paddingcontactos{
-    padding: 3vw 0vw;
+    padding: 5vw 0vw;
+}
+
+.spacecontactos{
+    height: 90vh;
+}
+
+.contactos{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    padding: 2vw 2vw 3vw;
+}
+
+.contactos p{
+    font-size: 0.5em;
+}
+
+.spacebetweencontactos{
+    padding-left: 12vw;
+    padding-right: 13vw;
 }
