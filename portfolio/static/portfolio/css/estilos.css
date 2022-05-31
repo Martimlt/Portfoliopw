@@ -210,6 +210,8 @@ main {
     color: orange;
 }
 
+
+
 /* --------- Formação ----------- */
 
 .link{
@@ -667,4 +669,46 @@ footer p:last-child {
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 15px grey;
+}
+
+/* -------------- media query -------------- */
+
+@media screen and (max-width: 1005px) { /* Alterar a outra media query para 660 */
+
+    .padding {
+        display: grid;
+        grid-template-areas: 'imgapr'
+                             'text1'
+                             'text2';
+    }
+
+    .padding div {
+        padding: 1.2vw 1.5vw;
+    }
+
+    .text1apresentacao{
+        grid-area: text1;
+    }
+
+    .imgapresentacao{
+        grid-area: imgapr;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .text2apresentacao{
+        grid-area: text2;
+    }
+
+
+    .space1{
+        margin-bottom: 0vw;
+    }
+
+    .space2 {
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+    }
+
 }
