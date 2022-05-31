@@ -123,7 +123,7 @@ def quizz_view(request):
         r = PontuacaoQuizz(nome=n, pontuacao=p)
         r.save()
         desenha_grafico_resultados(request)
-        return render(request, 'portfolio/ProgramacaoWeb.html')
+        return render(request, 'portfolio/programacaoWeb.html')
 
     return render(request, 'portfolio/formProgramacaoWeb.html')
 
