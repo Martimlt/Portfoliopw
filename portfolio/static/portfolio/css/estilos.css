@@ -711,4 +711,11 @@ footer p:last-child {
         margin-bottom: 0vw;
     }
 
+    .centerimgpw {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+}
+
 }
