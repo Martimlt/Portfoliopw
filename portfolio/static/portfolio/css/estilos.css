@@ -334,72 +334,6 @@ main {
     padding: 0;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-
-    .content {
-        padding: 20px 30px;
-        width: 70vw;
-        background-color: white;
-        position: relative;
-        border-radius: 6px;
-    }
-
-    /* Container around content */
-    .percurso {
-        padding: 10px 50px;
-        position: relative;
-        background-color: inherit;
-        width: 50%;
-    }
-
-    .left::before {
-        content: " ";
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        left: 30px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    /* Place the timelime to the left */
-    .timeline::after {
-        left: 31px;
-    }
-
-    /* Full-width containers */
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-        left: 15px;
-    }
-
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
-
-    
-}
-
 /* ----------- Projetos ------------ */
 
 .projetos{
@@ -580,7 +514,7 @@ footer p:last-child {
 /* ---------- Programação Web ------------- */
 
 .paddingFormPw {
-    padding: 0vw 14vw 2vw;
+    padding: 0vw 12vw 2vw;
 }
 
 .paddingTecnologias{
@@ -660,11 +594,11 @@ footer p:last-child {
     justify-content: center;
     background-color: rgb(245, 238, 206);
     flex-flow: row wrap;
-    padding: 2vw 2vw;
+    padding: 2vw 0vw;
 }
 
 .containerNoticias div {
-    width: 20vw;
+    width: 23vw;
     padding: 20px;
     margin: 10px;
     background-color: white;
@@ -717,6 +651,71 @@ footer p:last-child {
         margin-left: auto;
         margin-right: auto;
         width: 100%;
+    }
+
 }
+
+@media screen and (max-width: 680px) {
+
+    .content {
+        padding: 20px 30px;
+        width: 70vw;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+    }
+
+    /* Container around content */
+    .percurso {
+        padding: 10px 50px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+
 
 }
