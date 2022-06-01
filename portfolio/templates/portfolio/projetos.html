@@ -10,7 +10,7 @@
   {% for projeto in projetos %}
       {% if projeto.left == True %}
           <div class="separadoresEsquerda">
-              <img src="{% static 'portfolio/images/ProjetoFP.png' %}" class="imgprojeto"/>
+              <img src="{{pessoa.fotografia.url}}" class="imgprojeto"/>
               <div class="textCompetencias">
                   <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
                   <p>{{ projeto.descricao }}</p>
@@ -32,7 +32,7 @@
           </div>
       {% elif projeto.right == True %}
           <div class="separadoresDireita">
-              <img src="{% static 'portfolio/images/ProjetoFP.png' %}" class="imgprojeto"/>
+              <img src="{{pessoa.fotografia.url}}" class="imgprojeto"/>
               <div class="textCompetencias">
                   <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
                   <p>{{ projeto.descricao }}</p>

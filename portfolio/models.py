@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Pessoa(models.Model):
     primeiroNome = models.CharField(max_length=100)
     ultimoNome = models.CharField(max_length=100)

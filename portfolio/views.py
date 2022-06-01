@@ -7,6 +7,10 @@ from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQui
 from portfolio.forms import ElogiosForm, ProjetoForm
 
 
+def resolution_path(instance, filename):
+    return f'users/{instance.id}/'
+
+
 # Create your views here.
 def home_page_view(request):
     return render(request, 'portfolio/home.html')
