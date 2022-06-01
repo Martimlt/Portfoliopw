@@ -1,3 +1,4 @@
+import cloudinary.uploader
 from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
@@ -109,6 +110,11 @@ def pontuacao_quizz(request):
 
 
 def desenha_grafico_resultados(request):
+    cloudinary.config(
+        cloud_name="doqhqmtsl",
+        api_key="154772819713293",
+        api_secret="2jzlf0KAbEZ9QoICLZVJzSDKyv4"
+    )
     nomes = []
     pontuacoes = []
     for resultado in PontuacaoQuizz.objects.all():
@@ -117,7 +123,8 @@ def desenha_grafico_resultados(request):
     nomes.reverse()
     pontuacoes.reverse()
     plt.barh(nomes, pontuacoes)
-    plt.savefig('portfolio/static/portfolio/images/resultado.png', bbox_inches='tight')
+    plt.savefig('resultado.png', bbox_inches='tight')
+    cloudinary.uploader.upload("resultado.jpg", public_id="portfolio/resultado")
 
 
 def quizz_view(request):
