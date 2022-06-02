@@ -163,9 +163,8 @@ main {
 
 /* ----------- curso ------------ */
 
-.container {
+.containerCurso {
     display: flex;
-    justify-content: space-between;
     background-color: rgb(245, 238, 206);
     flex-flow: row wrap;
     justify-content: center;
@@ -173,7 +172,7 @@ main {
 }
 
 
-.container div {
+.containerCurso div {
     width: 70vw;
     padding: 25px;
     margin: 10px;

@@ -20,7 +20,7 @@
   <h2>Ano Atual: 2º ano</h2>
 </div>
 <h3 class="paddingcurso">1º ano</h3>
-<div class="container">
+<div class="containerCurso">
   {% for cadeira in cadeiras %} {% if cadeira.ano == 1 %}
   <div>
     <b>{{ cadeira.nome }} <a href={{ cadeira.linklusofona }} target="_blank"
@@ -50,7 +50,7 @@
   {% endfor %}
 </div>
 <h3 class="paddingcursotext">2º ano</h3>
-<div class="container">
+<div class="containerCurso">
   {% for cadeira in cadeiras %} {% if cadeira.ano == 2 %}
   <div>
     <b>{{ cadeira.nome }} <a href={{ cadeira.linklusofona }} target="_blank"
@@ -79,7 +79,7 @@
   {% endif %} {% endfor %}
 </div>
 <h3 class="paddingcursotext">3º ano</h3>
-<div class="container">
+<div class="containerCurso">
   {% for cadeira in cadeiras %} {% if cadeira.ano == 3 %}
   <div>
     <b>{{ cadeira.nome }} <a href={{ cadeira.linklusofona }} target="_blank"
