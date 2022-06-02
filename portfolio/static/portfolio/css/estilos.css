@@ -673,6 +673,16 @@ footer p:last-child {
 
 }
 
+@media screen and (max-width: 900px) {
+    .separadoresEsquerda{
+        display: grid;
+        flex-flow: row wrap;
+        padding-bottom: 2vw;
+        justify-content: center;
+    }
+
+}
+
 @media screen and (max-width: 680px) {
 
     .content {

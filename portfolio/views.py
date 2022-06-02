@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from matplotlib import pyplot as plt
+import random
 
 from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz, Noticia
 from portfolio.forms import ElogiosForm, ProjetoForm
