@@ -598,7 +598,7 @@ footer p:last-child {
 }
 
 .containerNoticias div {
-    width: 23vw;
+    width: 22vw;
     padding: 20px;
     margin: 10px;
     background-color: white;
@@ -652,6 +652,24 @@ footer p:last-child {
         margin-right: auto;
         width: 100%;
     }
+
+    .containerNoticias {
+        display: grid;
+        background-color: rgb(245, 238, 206);
+        flex-flow: row wrap;
+        padding: 2vw 0vw;
+    }
+
+    .containerNoticias div {
+        width: 50vw;
+        padding: 20px;
+        margin: 10px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px grey;
+    }
+
+
 
 }
 
@@ -717,5 +735,13 @@ footer p:last-child {
         left: 0%;
     }
 
+    .containerNoticias div {
+        width: 60vw;
+        padding: 20px;
+        margin: 10px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px grey;
+    }
 
 }
