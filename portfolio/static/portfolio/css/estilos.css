@@ -490,7 +490,6 @@ footer p:last-child {
 
 .containerElogio {
     display: flex;
-    justify-content: space-between;
     background-color: rgb(245, 238, 206);
     flex-flow: row wrap;
     justify-content: center;
@@ -679,6 +678,14 @@ footer p:last-child {
         flex-flow: row wrap;
         padding-bottom: 2vw;
         justify-content: center;
+    }
+
+    .separadoresDireita {
+        display: grid;
+        flex-flow: row wrap;
+        padding-bottom: 2vw;
+        justify-content: center;
+        text-align: center;
     }
 
 }
