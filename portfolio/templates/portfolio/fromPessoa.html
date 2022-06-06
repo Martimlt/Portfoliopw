@@ -1,0 +1,12 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+
+<a class="fa-solid fa-arrow-left seta" href="{% url 'portfolio:home' %}"></a>
+<h2 class="title-form-center">Adicionar Pessoa</h2>
+<section class="paddingElogios">
+  <form class="form-center" method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Submeter" class="btn" />
+  </form>
+</section>
+
+{% endblock %}

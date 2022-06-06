@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 import random
 
 from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz, Noticia
-from portfolio.forms import ElogiosForm, ProjetoForm
+from portfolio.forms import ElogiosForm, ProjetoForm, PessoaForm, CadeiraForm
 
 
 def resolution_path(instance, filename):
@@ -65,9 +65,31 @@ def view_apagar_projeto(request, projeto_id):
     return HttpResponseRedirect(reverse('portfolio:projetos'))
 
 
+def formpessoa_page_view(request):
+    form = PessoaForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:home'))
+
+    context = {'form': form}
+
+    return render(request, 'portfolio/fromPessoa.html', context)
+
+
 def curso_page_view(request):
     context = {'cadeiras': Cadeira.objects.all(), 'range': range(1, 6)}
     return render(request, 'portfolio/curso.html', context)
+
+
+def formcadeiras_page_view(request):
+    form = CadeiraForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:formcadeiras'))
+
+    context = {'form': form}
+
+    return render(request, 'portfolio/formCadeira.html', context)
 
 
 def elogios_page_view(request):

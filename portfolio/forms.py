@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Elogio, Projeto
+from .models import Elogio, Projeto, Pessoa, Cadeira
 
 
 class ElogiosForm(ModelForm):
@@ -59,6 +59,61 @@ class ProjetoForm(ModelForm):
             'competencia': 'Competencia adquirida',
             'left': 'Fotografia à Esquerda',
             'right': 'Fotografia à Direita',
+        }
+
+        # texto auxiliar a um determinado campo do formulário
+        help_texts = {
+
+        }
+
+
+class PessoaForm(ModelForm):
+    class Meta:
+        model = Pessoa
+        fields = '__all__'
+        # inserção de classes CSS para formatação de cada campo do formulário
+        widgets = {
+            'primeiroNome': forms.TextInput(attrs={'placeholder': 'Insira o primeiro nome'}),
+            'ultimoNome': forms.TextInput(attrs={'placeholder': 'Insira o segundo nome'}),
+            'linkedin': forms.URLInput(attrs={'placeholder': 'Insira o link'}),
+            'outroLink': forms.URLInput(attrs={'placeholder': 'Link Lusófona ou Heroku'}),
+        }
+
+        # texto a exibir junto à janela de inserção
+        labels = {
+            'primeiroNome': 'Primeiro Nome',
+            'ultimoNome': 'Último Nome',
+            'linkedin': 'Linkedin',
+            'outroLink': 'Página Lusófona ou Heroku',
+        }
+
+        # texto auxiliar a um determinado campo do formulário
+        help_texts = {
+
+        }
+
+
+class CadeiraForm(ModelForm):
+    class Meta:
+        model = Cadeira
+        fields = '__all__'
+        # inserção de classes CSS para formatação de cada campo do formulário
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o nome da cadeira'}),
+            'descricao': forms.Textarea(attrs={'class': 'linebreakTextArea2', 'placeholder': 'Insira a descrição'}),
+            'ano': forms.NumberInput(attrs={'class': 'spaceform','placeholder': 'Insira o ano'}),
+            'semestre': forms.NumberInput(attrs={'class': 'spaceform','placeholder': 'Insira o semestre'}),
+            'ects': forms.NumberInput(attrs={'class': 'spaceform', 'placeholder': 'Insira os Ects'}),
+            'ranking': forms.NumberInput(attrs={'class': 'spaceform', 'placeholder': 'Insira o ranking'}),
+            'linklusofona': forms.URLInput(attrs={'class': 'linebreak', 'placeholder': 'Insira a Página da Lusófona'}),
+        }
+
+        # texto a exibir junto à janela de inserção
+        labels = {
+            'nome': 'Nome cadeira',
+            'descricao': 'Descrição',
+            'professorAuxiliar': 'Professor Auxiliar',
+            'linklusofona': 'Link site lusófona',
         }
 
         # texto auxiliar a um determinado campo do formulário
