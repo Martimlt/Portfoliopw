@@ -1,0 +1,22 @@
+{% extends 'portfolio/layout.html' %} {% block main %}
+<a
+  class="fa-solid fa-arrow-left seta"
+  href="{% url 'portfolio:projetos' %}"
+></a>
+    <div class="centerTitles">
+        <h2>Editar Projeto</h2>
+    </div>
+    <div class="paddingElogios">
+        <form action="{% url 'portfolio:editar' projeto_id %}" method="post">
+            {% csrf_token %}
+            <table class="paddingElogios">
+                {{ form.as_table }}
+            </table>
+            <div class="textDown">
+                <input type="submit" value="Atualizar" class="btn">
+                <a href="{% url 'portfolio:apagar' projeto_id %}"><button class="btn">Apagar</button></a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

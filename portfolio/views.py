@@ -1,4 +1,5 @@
 import cloudinary.uploader
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
@@ -41,6 +42,27 @@ def formprojetos_page_view(request):
     context = {'form': form}
 
     return render(request, 'portfolio/formProject.html', context)
+
+
+@login_required
+def view_editar_projeto(request, projeto_id):
+
+    projeto = Projeto.objects.get(id=projeto_id)
+    form = ProjetoForm(request.POST or None, instance=projeto)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+    context = {'form': form, 'projeto_id': projeto_id}
+    return render(request, 'portfolio/editaProjeto.html', context)
+
+
+def view_apagar_projeto(request, projeto_id):
+
+    projeto = Projeto.objects.get(id=projeto_id)
+    projeto.delete()
+    return HttpResponseRedirect(reverse('portfolio:projetos'))
 
 
 def curso_page_view(request):
