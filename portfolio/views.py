@@ -85,11 +85,32 @@ def formcadeiras_page_view(request):
     form = CadeiraForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('portfolio:formcadeiras'))
+        return HttpResponseRedirect(reverse('portfolio:curso'))
 
     context = {'form': form}
 
     return render(request, 'portfolio/formCadeira.html', context)
+
+
+@login_required
+def view_editar_cadeira(request, cadeira_id):
+
+    cadeira = Cadeira.objects.get(id=cadeira_id)
+    form = CadeiraForm(request.POST or None, instance=cadeira)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:curso'))
+
+    context = {'form': form, 'cadeira_id': cadeira_id}
+    return render(request, 'portfolio/editaCadeira.html', context)
+
+
+def view_apagar_cadeira(request, cadeira_id):
+
+    cadeira = Cadeira.objects.get(id=cadeira_id)
+    cadeira.delete()
+    return HttpResponseRedirect(reverse('portfolio:curso'))
 
 
 def elogios_page_view(request):

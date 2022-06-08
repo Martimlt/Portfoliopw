@@ -604,6 +604,11 @@ footer p:last-child {
     box-shadow: 5px 5px 15px grey;
 }
 
+.lettersize{
+    font-size: 1em !important;
+    font-weight: bold;
+}
+
 /* -------------- media query -------------- */
 
 @media screen and (max-width: 1005px) { /* Alterar a outra media query para 660 */
@@ -768,3 +773,5 @@ footer p:last-child {
     }
 
 }
+
+
