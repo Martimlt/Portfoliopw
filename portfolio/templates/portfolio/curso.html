@@ -82,6 +82,10 @@
             <span class="fa fa-star"></span>
         {% endif %}
     {% endfor %}
+      {% if request.user.is_authenticated %}
+          <br>
+          <a href="{% url 'portfolio:editarCadeira' cadeira.id %}"><button class="btn">Editar</button></a>
+      {% endif %}
   </div>
   {% endif %} {% endfor %}
 </div>
@@ -111,6 +115,10 @@
             <span class="fa fa-star"></span>
         {% endif %}
     {% endfor %}
+      {% if request.user.is_authenticated %}
+          <br>
+          <a href="{% url 'portfolio:editarCadeira' cadeira.id %}"><button class="btn">Editar</button></a>
+      {% endif %}
   </div>
   {% endif %} {% endfor %}
 </div>
