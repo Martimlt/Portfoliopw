@@ -523,6 +523,10 @@ footer p:last-child {
     text-align: center;
 }
 
+.centerpw img{
+    width: 100%;
+}
+
 /*--- vreificar ----*/
 .imgpw{
     width: 60%;
