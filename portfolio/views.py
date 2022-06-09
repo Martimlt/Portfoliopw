@@ -25,7 +25,7 @@ def contacto_page_view(request):
 
 def apresentacao_page_view(request):
     context = {'competencias': Competencia.objects.all()}
-    return render(request, 'portfolio/apresentacao.html',context)
+    return render(request, 'portfolio/apresentacao.html', context)
 
 
 def projetos_page_view(request):
@@ -34,7 +34,7 @@ def projetos_page_view(request):
 
 
 def formprojetos_page_view(request):
-    form = ProjetoForm(request.POST or None)
+    form = ProjetoForm(request.POST or None, request.FILES)
     if form.is_valid():
         form.save()
         return HttpResponseRedirect(reverse('portfolio:projetos'))

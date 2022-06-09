@@ -1,3 +1,5 @@
+/* ---------- hours ---------- */
+
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -18,3 +20,4 @@ function checkTime(i) {
 window.onload = function () {
   startTime();
 }
+

@@ -40,9 +40,8 @@ class ProjetoForm(ModelForm):
         widgets = {
             'titulo': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o título'}),
             'descricao': forms.Textarea(attrs={'class': 'linebreakTextArea2', 'placeholder': 'Insira a descrição'}),
-            'linkGit': forms.URLInput(attrs={'class': 'linebreak','placeholder': 'Insira o link'}),
-            'ano': forms.NumberInput(attrs={'class': 'spaceform','placeholder': 'Insira o ano'}),
-            'imagem': forms.FileInput(attrs={'class': 'spaceform','placeholder': 'Insira o seu primeiro nome'}),
+            'linkGit': forms.URLInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o link'}),
+            'ano': forms.NumberInput(attrs={'class': 'spaceform', 'placeholder': 'Insira o ano'}),
             'tecnologia': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira a tecnologia'}),
         }
 

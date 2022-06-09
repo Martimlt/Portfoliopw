@@ -24,7 +24,7 @@ header {
     z-index: 999;
 }
 
-header div {
+.logolayout {
     font-size: 2em;
     text-align: center;
     margin-left: 2%;
@@ -613,6 +613,7 @@ footer p:last-child {
     font-size: 1em !important;
     font-weight: bold;
 }
+
 
 /* -------------- media query -------------- */
 
