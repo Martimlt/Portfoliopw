@@ -67,6 +67,8 @@ class ProjetoFinalDeCurso(models.Model):
     relatorio = models.URLField(blank=True)
     github = models.URLField(blank=True)
     video = models.URLField(blank=True)
+    left = models.BooleanField(default=False)
+    right = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.titulo} - {self.autor}"

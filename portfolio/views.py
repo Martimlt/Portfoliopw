@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from matplotlib import pyplot as plt
 import random
 
-from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz, Noticia
+from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz, Noticia, ProjetoFinalDeCurso
 from portfolio.forms import ElogiosForm, ProjetoForm, PessoaForm, CadeiraForm
 
 
@@ -29,7 +29,7 @@ def apresentacao_page_view(request):
 
 
 def projetos_page_view(request):
-    context = {'projetos': Projeto.objects.all()}
+    context = {'projetos': Projeto.objects.all(), 'projetosFinaisDeCurso': ProjetoFinalDeCurso.objects.all()}
     return render(request, 'portfolio/projetos.html', context)
 
 
