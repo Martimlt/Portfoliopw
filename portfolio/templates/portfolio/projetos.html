@@ -80,7 +80,7 @@
                   <p>{{ projetoFinal.resumo }}</p>
                   <p><b>Autor(a):</b> {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
                   ><i class="fa-brands fa-linkedin button1"></i></a></p>
-                  <p>Orientador(a): {{ projetoFinal.orientador.primeiroNome }} {{ projetoFinal.orientador.ultimoNome }} <a href={{ projetoFinal.orientador.linkedin }} target="_blank"
+                  <p><b>Orientador(a):</b> {{ projetoFinal.orientador.primeiroNome }} {{ projetoFinal.orientador.ultimoNome }} <a href={{ projetoFinal.orientador.linkedin }} target="_blank"
                   ><i class="fa-brands fa-linkedin button1"></i
                   ></a> <a href={{ projetoFinal.orientador.outroLink }} target="_blank"
                   ><i class="fa-solid fa-link button1"></i></a></p>
@@ -105,8 +105,10 @@
                   <p>{{ projetoFinal.resumo }}</p>
                   <p><b>Autor(a):</b> {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
                   ><i class="fa-brands fa-linkedin button1"></i></a></p>
-                  <p><b>Orientador(a):</b> {{ projetoFinal.orientador }} <a href={{ projetoFinal.orientador.linkedin }} target="_blank"
-                  ><i class="fa-brands fa-linkedin button1"></i></a></p>
+                  <p><b>Orientador(a):</b> {{ projetoFinal.orientador.primeiroNome }} {{ projetoFinal.orientador.ultimoNome }} <a href={{ projetoFinal.orientador.linkedin }} target="_blank"
+                  ><i class="fa-brands fa-linkedin button1"></i
+                  ></a> <a href={{ projetoFinal.orientador.outroLink }} target="_blank"
+                  ><i class="fa-solid fa-link button1"></i></a></p>
                   <p><b>Ano do projeto:</b> {{ projetoFinal.ano }}</p>
                   {% if not projetoFinal.video == '' %}
                   <a href="{{ projetoFinal.video }}" target="_blank"
