@@ -78,9 +78,9 @@
                   <h3>{{ projetoFinal.titulo }} - <a href="{{ projetoFinal.relatorio }}" target="_blank"
                   >Relatório</a></h3>
                   <p>{{ projetoFinal.resumo }}</p>
-                  <p>Ano do projeto: {{ projetoFinal.ano }}</p>
-                  <p>Autor(a): {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
+                  <p><b>Autor(a):</b> {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
                   ><i class="fa-brands fa-linkedin button1"></i></a></p>
+                  <p><b>Ano do projeto:</b> {{ projetoFinal.ano }}</p>
                   {% if not projetoFinal.video == '' %}
                   <a href="{{ projetoFinal.video }}" target="_blank"
                   ><i class="fa-brands fa-youtube button1"></i></a>
@@ -99,11 +99,9 @@
                   <h3>{{ projetoFinal.titulo }} - <a href="{{ projetoFinal.relatorio }}" target="_blank"
                   >Relatório</a></h3>
                   <p>{{ projetoFinal.resumo }}</p>
-                  <p>Ano do projeto: {{ projetoFinal.ano }}</p>
-                  <p>Autor(a): {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
-        ><i class="fa-brands fa-linkedin button1"></i
-      ></a> <a href={{ projetoFinal.autor.outroLink }} target="_blank"
-        ><i class="fa-solid fa-heading button1"></i></a></p>
+                  <p><b>Autor(a):</b> {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
+                  ><i class="fa-brands fa-linkedin button1"></i></a></p>
+                  <p><b>Ano do projeto:</b> {{ projetoFinal.ano }}</p>
                   {% if not projetoFinal.video == '' %}
                   <a href="{{ projetoFinal.video }}" target="_blank"
                   ><i class="fa-brands fa-youtube button1"></i></a>
