@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 import random
 
 from portfolio.models import Cadeira, Elogio, Projeto, Competencia, PontuacaoQuizz, Noticia, ProjetoFinalDeCurso
-from portfolio.forms import ElogiosForm, ProjetoForm, PessoaForm, CadeiraForm
+from portfolio.forms import ElogiosForm, ProjetoForm, PessoaForm, CadeiraForm, TfcForm
 
 
 def resolution_path(instance, filename):
@@ -62,6 +62,36 @@ def view_apagar_projeto(request, projeto_id):
 
     projeto = Projeto.objects.get(id=projeto_id)
     projeto.delete()
+    return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+
+def formtfc_page_view(request):
+    form = TfcForm(request.POST or None, request.FILES)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+    context = {'form': form}
+
+    return render(request, 'portfolio/formTfc.html', context)
+
+
+@login_required
+def view_editar_tfc(request, tfc_id):
+    tfc = ProjetoFinalDeCurso.objects.get(id=tfc_id)
+    form = TfcForm(request.POST or None, instance=tfc)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+    context = {'form': form, 'tfc_id': tfc_id}
+    return render(request, 'portfolio/editaTfc.html', context)
+
+
+def view_apagar_tfc(request, tfc_id):
+    tfc = ProjetoFinalDeCurso.objects.get(id=tfc_id)
+    tfc.delete()
     return HttpResponseRedirect(reverse('portfolio:projetos'))
 
 

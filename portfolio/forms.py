@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Elogio, Projeto, Pessoa, Cadeira
+from .models import Elogio, Projeto, Pessoa, Cadeira, ProjetoFinalDeCurso
 
 
 class ElogiosForm(ModelForm):
@@ -113,6 +113,34 @@ class CadeiraForm(ModelForm):
             'descricao': 'Descrição',
             'professorAuxiliar': 'Professor Auxiliar',
             'linklusofona': 'Link site lusófona',
+        }
+
+        # texto auxiliar a um determinado campo do formulário
+        help_texts = {
+
+        }
+
+
+class TfcForm(ModelForm):
+    class Meta:
+        model = ProjetoFinalDeCurso
+        fields = '__all__'
+        # inserção de classes CSS para formatação de cada campo do formulário
+        widgets = {
+            'titulo': forms.TextInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o titulo'}),
+            'ano': forms.NumberInput(attrs={'class': 'spaceform', 'placeholder': 'Insira o ano'}),
+            'resumo': forms.Textarea(attrs={'class': 'linebreakTextArea2', 'placeholder': 'Insira o resumo'}),
+            'relatorio': forms.URLInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o link do relatório'}),
+            'github': forms.URLInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o link do Github'}),
+            'video': forms.URLInput(attrs={'class': 'linebreak', 'placeholder': 'Insira o link do vídeo'}),
+        }
+
+        # texto a exibir junto à janela de inserção
+        labels = {
+            'titulo': 'Titulo TFC',
+            'orientador': 'Professor Orientador',
+            'imagem': 'Imagem Projeto',
+            'relatorio': 'Relatório Projeto',
         }
 
         # texto auxiliar a um determinado campo do formulário
