@@ -67,6 +67,60 @@
   {% endfor %}
 </div>
     <h2 class="centerTitles">Trabalhos Finais de Curso</h2>
-
+<div class="projetos">
+  {% for projetoFinal in projetosFinaisDeCurso %}
+      {% if projetoFinal.left == True %}
+          <div class="separadoresEsquerda">
+              <div class="imgprojeto">
+                  <img src="{{ projetoFinal.imagem.url }}"/>
+              </div>
+              <div class="textCompetencias">
+                  <h3>{{ projetoFinal.titulo }} - <a href="{{ projetoFinal.relatorio }}" target="_blank"
+                  >Relatório</a></h3>
+                  <p>{{ projetoFinal.resumo }}</p>
+                  <p>Ano do projeto: {{ projetoFinal.ano }}</p>
+                  <p>Autor(a): {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
+                  ><i class="fa-brands fa-linkedin button1"></i></a></p>
+                  {% if not projetoFinal.video == '' %}
+                  <a href="{{ projetoFinal.video }}" target="_blank"
+                  ><i class="fa-brands fa-youtube button1"></i></a>
+                  {% endif %}
+                  <a href="{{ projetoFinal.linkGit }}" target="_blank"
+                  ><i class="fa-brands fa-github button1"></i
+                  ></a>
+                  {% if request.user.is_authenticated %}
+                      <a href="{% url 'portfolio:editarProjeto' projeto.id %}"><button class="btn">Editar</button></a>
+                  {% endif %}
+              </div>
+          </div>
+      {% elif projetoFinal.right == True %}
+          <div class="separadoresDireita">
+              <div class="imgprojeto">
+                  <img src="{{ projetoFinal.imagem.url }}"/>
+              </div>
+              <div class="textCompetencias">
+                  <h3>{{ projetoFinal.titulo }} - <a href="{{ projetoFinal.relatorio }}" target="_blank"
+                  >Relatório</a></h3>
+                  <p>{{ projetoFinal.resumo }}</p>
+                  <p>Ano do projeto: {{ projetoFinal.ano }}</p>
+                  <p>Autor(a): {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
+        ><i class="fa-brands fa-linkedin button1"></i
+      ></a> <a href={{ projetoFinal.autor.outroLink }} target="_blank"
+        ><i class="fa-solid fa-heading button1"></i></a></p>
+                  {% if not projetoFinal.video == '' %}
+                  <a href="{{ projetoFinal.video }}" target="_blank"
+                  ><i class="fa-brands fa-youtube button1"></i></a>
+                  {% endif %}
+                  <a href="{{ projetoFinal.linkGit }}" target="_blank"
+                  ><i class="fa-brands fa-github button1"></i
+                  ></a>
+                  {% if request.user.is_authenticated %}
+                      <a href="{% url 'portfolio:editarProjeto' projeto.id %}"><button class="btn">Editar</button></a>
+                  {% endif %}
+              </div>
+          </div>
+      {% endif %}
+  {% endfor %}
+</div>
 
 {% endblock %}
