@@ -18,12 +18,12 @@
                   <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
                   <p>{{ projeto.descricao }}</p>
                   <p>Realizado no {{ projeto.ano }}ºano</p>
-                  <p>Colega grupo: {{ projeto.participante }} <a href={{ projeto.participante.linkedin }} target="_blank"
+                  <p><b>Colega grupo:</b> {{ projeto.participante }} <a href={{ projeto.participante.linkedin }} target="_blank"
         ><i class="fa-brands fa-linkedin button1"></i
       ></a> <a href={{ projeto.participante.outroLink }} target="_blank"
         ><i class="fa-solid fa-heading button1"></i></a></p>
-                  <p>Tecnologia utilizada: {{ projeto.tecnologia }}</p>
-                  <p>Competência obtida: {{ projeto.competencia }}</p>
+                  <p><b>Tecnologia utilizada:</b> {{ projeto.tecnologia }}</p>
+                  <p><b>Competência obtida:</b> {{ projeto.competencia }}</p>
                   {% if not projeto.video == '' %}
                   <a href="{{ projeto.video }}" target="_blank"
                   ><i class="fa-brands fa-youtube button1"></i></a>
@@ -45,12 +45,12 @@
                   <h3>{{ projeto.titulo }} - {{ projeto.cadeira }}</h3>
                   <p>{{ projeto.descricao }}</p>
                   <p>Realizado no {{ projeto.ano }}ºano</p>
-                  <p>Colega grupo: {{ projeto.participante }} <a href={{ projeto.participante.linkedin }} target="_blank"
+                  <p><b>Colega grupo:</b> {{ projeto.participante }} <a href={{ projeto.participante.linkedin }} target="_blank"
         ><i class="fa-brands fa-linkedin button1"></i
       ></a> <a href={{ projeto.participante.outroLink }} target="_blank"
-        ><i class="fa-solid fa-heading button1"></i></a></p></p>
-                  <p>Tecnologia utilizada: {{ projeto.tecnologia }}</p>
-                  <p>Competência obtida: {{ projeto.competencia }}</p>
+        ><i class="fa-solid fa-heading button1"></i></a></p>
+                  <p><b>Tecnologia utilizada:</b> {{ projeto.tecnologia }}</p>
+                  <p><b>Competência obtida:</b> {{ projeto.competencia }}</p>
                   {% if not projeto.video == '' %}
                   <a href="{{ projeto.video }}" target="_blank"
                   ><i class="fa-brands fa-youtube button1"></i></a>
