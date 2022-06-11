@@ -61,6 +61,7 @@ class Projeto(models.Model):
 class ProjetoFinalDeCurso(models.Model):
     titulo = models.CharField(max_length=100)
     autor = models.ForeignKey(Pessoa, on_delete=models.CASCADE)
+    orientador = models.ForeignKey(Pessoa, on_delete=models.CASCADE, related_name='+', null=True)
     ano = models.IntegerField()
     resumo = models.CharField(max_length=200)
     imagem = models.ImageField()
