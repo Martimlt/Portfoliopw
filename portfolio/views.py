@@ -216,7 +216,7 @@ def desenha_grafico_resultados(request):
     pontuacoes.reverse()
     plt.barh(nomes, pontuacoes)
     plt.savefig('resultado.png', bbox_inches='tight')
-    cloudinary.uploader.upload("resultado.png", public_id="portfolio/resultado")
+    cloudinary.uploader.upload("resultado.png", public_id="portfolio/resultado", overwrite=True, invalidate=True)
 
 
 def quizz_view(request):
