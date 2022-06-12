@@ -164,10 +164,6 @@ def programacaoWeb_page_view(request):
     return render(request, 'portfolio/programacaoWeb.html', context)
 
 
-def formPW_page_view(request):
-    return render(request, 'portfolio/formProgramacaoWeb.html')
-
-
 def login_view(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -230,7 +226,7 @@ def quizz_view(request):
         r = PontuacaoQuizz(nome=n, pontuacao=p)
         r.save()
         desenha_grafico_resultados(request)
-        return render(request, 'portfolio/programacaoWeb.html')
+        return HttpResponseRedirect(reverse('portfolio:programacaoWeb'))
 
     return render(request, 'portfolio/formProgramacaoWeb.html')
 
