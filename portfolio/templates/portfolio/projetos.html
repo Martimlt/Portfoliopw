@@ -67,72 +67,7 @@
   {% endfor %}
 </div>
     <h2 class="centerTitles">Trabalhos Finais de Curso</h2>
-    <div class="btnprojetos">
-    {% if user.is_authenticated %}
-      <a href="{% url 'portfolio:formtfc' %}"><button class="btn">Adicionar TFC</button></a>
-      <a href="{% url 'portfolio:formpessoa' %}"><button class="btn">Adicionar Pessoa</button></a>
-    {% endif %}
-</div>
-<div class="projetos">
-  {% for projetoFinal in projetosFinaisDeCurso %}
-      {% if projetoFinal.left == True %}
-          <div class="separadoresEsquerda">
-              <div class="imgprojeto">
-                  <img src="{{ projetoFinal.imagem.url }}"/>
-              </div>
-              <div class="textCompetencias">
-                  <h3>{{ projetoFinal.titulo }} - <a href="{{ projetoFinal.relatorio }}" class="link" target="_blank"
-                  >Relatório</a></h3>
-                  <p>{{ projetoFinal.resumo }}</p>
-                  <p><b>Autor(a):</b> {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
-                  ><i class="fa-brands fa-linkedin button1"></i></a></p>
-                  <p><b>Orientador(a):</b> {{ projetoFinal.orientador.primeiroNome }} {{ projetoFinal.orientador.ultimoNome }} <a href={{ projetoFinal.orientador.linkedin }} target="_blank"
-                  ><i class="fa-brands fa-linkedin button1"></i
-                  ></a> <a href={{ projetoFinal.orientador.outroLink }} target="_blank"
-                  ><i class="fa-solid fa-link button1"></i></a></p>
-                  <p><b>Ano do projeto:</b> {{ projetoFinal.ano }}</p>
-                  {% if not projetoFinal.video == '' %}
-                  <a href="{{ projetoFinal.video }}" target="_blank"
-                  ><i class="fa-brands fa-youtube button1"></i></a>
-                  {% endif %}
-                  <a href="{{ projetoFinal.linkGit }}" target="_blank"
-                  ><i class="fa-brands fa-github button1"></i
-                  ></a>
-                  {% if request.user.is_authenticated %}
-                      <a href="{% url 'portfolio:editarTfc' projetoFinal.id %}"><button class="btn">Editar</button></a>
-                  {% endif %}
-              </div>
-          </div>
-      {% elif projetoFinal.right == True %}
-          <div class="separadoresDireita">
-              <div class="imgprojeto">
-                  <img src="{{ projetoFinal.imagem.url }}"/>
-              </div>
-              <div class="textCompetencias">
-                  <h3>{{ projetoFinal.titulo }} - <a href="{{ projetoFinal.relatorio }}" class="link" target="_blank"
-                  >Relatório</a></h3>
-                  <p>{{ projetoFinal.resumo }}</p>
-                  <p><b>Autor(a):</b> {{ projetoFinal.autor }} <a href={{ projetoFinal.autor.linkedin }} target="_blank"
-                  ><i class="fa-brands fa-linkedin button1"></i></a></p>
-                  <p><b>Orientador(a):</b> {{ projetoFinal.orientador.primeiroNome }} {{ projetoFinal.orientador.ultimoNome }} <a href={{ projetoFinal.orientador.linkedin }} target="_blank"
-                  ><i class="fa-brands fa-linkedin button1"></i
-                  ></a> <a href={{ projetoFinal.orientador.outroLink }} target="_blank"
-                  ><i class="fa-solid fa-link button1"></i></a></p>
-                  <p><b>Ano do projeto:</b> {{ projetoFinal.ano }}</p>
-                  {% if not projetoFinal.video == '' %}
-                  <a href="{{ projetoFinal.video }}" target="_blank"
-                  ><i class="fa-brands fa-youtube button1"></i></a>
-                  {% endif %}
-                  <a href="{{ projetoFinal.linkGit }}" target="_blank"
-                  ><i class="fa-brands fa-github button1"></i
-                  ></a>
-                  {% if request.user.is_authenticated %}
-                      <a href="{% url 'portfolio:editarTfc' projetoFinal.id %}"><button class="btn">Editar</button></a>
-                  {% endif %}
-              </div>
-          </div>
-      {% endif %}
-  {% endfor %}
-</div>
+    <p class="tfcclass">Ao clicar no link em baixo, irá ser redirecionado para uma página que contêm alguns trabalhos finais de cursos de anos anteriores, que considerei interessantes.</p>
+    <p class="tfcclass"><a href="{% url 'portfolio:tfc' %}" class="link">Clique aqui</a></p>
 
 {% endblock %}

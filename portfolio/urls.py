@@ -12,6 +12,7 @@ urlpatterns = [
     path('formprojetos', views.formprojetos_page_view, name='formprojetos'),
     path('editarProjeto/<int:projeto_id>', views.view_editar_projeto, name='editarProjeto'),
     path('apagarProjeto/<int:projeto_id>', views.view_apagar_projeto, name='apagarProjeto'),
+    path('tfc', views.tfc_page_view, name='tfc'),
     path('formtfc', views.formtfc_page_view, name='formtfc'),
     path('editarTfc/<int:tfc_id>', views.view_editar_tfc, name='editarTfc'),
     path('apagarTfc/<int:tfc_id>', views.view_apagar_tfc, name='apagarTfc'),

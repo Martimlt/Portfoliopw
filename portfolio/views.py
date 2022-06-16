@@ -29,7 +29,7 @@ def apresentacao_page_view(request):
 
 
 def projetos_page_view(request):
-    context = {'projetos': Projeto.objects.all(), 'projetosFinaisDeCurso': ProjetoFinalDeCurso.objects.all()}
+    context = {'projetos': Projeto.objects.all()}
     return render(request, 'portfolio/projetos.html', context)
 
 
@@ -65,11 +65,16 @@ def view_apagar_projeto(request, projeto_id):
     return HttpResponseRedirect(reverse('portfolio:projetos'))
 
 
+def tfc_page_view(request):
+    context = {'projetosFinaisDeCurso': ProjetoFinalDeCurso.objects.all()}
+    return render(request, 'portfolio/tfcs.html', context)
+
+
 def formtfc_page_view(request):
     form = TfcForm(request.POST or None, request.FILES)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('portfolio:projetos'))
+        return HttpResponseRedirect(reverse('portfolio:tfc'))
 
     context = {'form': form}
 
@@ -83,7 +88,7 @@ def view_editar_tfc(request, tfc_id):
 
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('portfolio:projetos'))
+        return HttpResponseRedirect(reverse('portfolio:tfc'))
 
     context = {'form': form, 'tfc_id': tfc_id}
     return render(request, 'portfolio/editaTfc.html', context)
@@ -92,7 +97,7 @@ def view_editar_tfc(request, tfc_id):
 def view_apagar_tfc(request, tfc_id):
     tfc = ProjetoFinalDeCurso.objects.get(id=tfc_id)
     tfc.delete()
-    return HttpResponseRedirect(reverse('portfolio:projetos'))
+    return HttpResponseRedirect(reverse('portfolio:tfc'))
 
 
 def formpessoa_page_view(request):

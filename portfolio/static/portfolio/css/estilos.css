@@ -631,6 +631,13 @@ footer p:last-child {
     font-weight: bold;
 }
 
+/* ----------------- TFCS ------------------- */
+
+.tfcclass{
+    text-align: center;
+    padding: 0vw 8vw;
+}
+
 
 /* -------------- media query -------------- */
 
