@@ -592,7 +592,7 @@ footer p:last-child {
 }
 
 .imgtec{
-    width: 20%;
+    width: 15%;
     height: auto;
     float: left;
     padding-right: 15px;
@@ -691,6 +691,14 @@ footer p:last-child {
 /* -------------- media query -------------- */
 
 @media screen and (max-width: 1005px) { /* Alterar a outra media query para 660 */
+
+
+    .imgtec{
+        width: 20%;
+        height: auto;
+        float: left;
+        padding-right: 15px;
+    }
 
     .padding {
         display: grid;
