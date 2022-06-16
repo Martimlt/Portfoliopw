@@ -169,6 +169,10 @@ def programacaoWeb_page_view(request):
     return render(request, 'portfolio/programacaoWeb.html', context)
 
 
+def tecnologias_page_view(request):
+    return render(request, 'portfolio/tecnologias.html')
+
+
 def login_view(request):
     if request.method == "POST":
         username = request.POST['username']

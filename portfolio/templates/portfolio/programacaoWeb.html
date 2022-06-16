@@ -3,34 +3,9 @@
 {% block main %}
     {% load static %}
 <div class="paddingFormPw">
-  <h2 class="centerTitles">Programação Web</h2>
-  <h3 class="centerTitles">Tecnologias Existentes</h3>
-  <div class="paddingTecnologias">
-    <h4>Front-End</h4>
-    <p>
-      O programador responsável pelo front-end é quem “dá vida” à interface
-      gráfica entre o utilizador e o website, para que os utilizadores possam
-      ver e interagir com o website. Exemplos:
-    </p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </div>
-  <div class="paddingTecnologias">
-    <h4>Back-End</h4>
-    <p>
-      Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás”
-      da aplicação. É o responsável, em termos gerais, pela implementação das
-      regras de negócio e não toca na parte visual da aplicação. Exemplos:
-    </p>
-    <ul>
-      <li>Java</li>
-      <li>Python</li>
-      <li>C#</li>
-    </ul>
-  </div>
+    <h2 class="centerTitles">Tecnologias Existentes</h2>
+    <p class="pwclass">Ao clicar no link em baixo, irá ser redirecionado para uma página onde poderá encontrar algumas informações sobre tecnologias utilizadas para desenvolver websites.</p>
+    <p class="pwlink"><a href="{% url 'portfolio:tecnologias' %}" class="link">Clique aqui</a></p>
     <h3 class="centerTitles">Sobre este Website</h3>
     <div class="paddingTecnologias">
         <h4>Estrutura</h4>
@@ -38,11 +13,11 @@
     </div>
     <div class="paddingTecnologias">
         <h4>Front-End</h4>
-        <p>As tecnologias de front-end utilizadas neste website são HTML5 e CSS</p>
+        <p>As tecnologias de front-end utilizadas neste website são <abbr style="text-decoration: none" title="Hyper Text Markup Language">HTML5</abbr> e <abbr style="text-decoration: none" title="Cascading Style Sheets">CSS</abbr>.</p>
     </div>
     <div class="paddingTecnologias">
         <h4>Back-End</h4>
-        <p>A tecnologia de back-end utilizada foi o python</p>
+        <p>A tecnologia de back-end utilizada foi o Python.</p>
     </div>
     <div class="paddingTecnologias">
         <h4>Framework</h4>

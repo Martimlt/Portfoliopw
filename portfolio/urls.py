@@ -24,6 +24,7 @@ urlpatterns = [
     path('elogios', views.elogios_page_view, name='elogios'),
     path('formElogios', views.formElogios_page_view, name='formElogios'),
     path('programacaoWeb', views.programacaoWeb_page_view, name='programacaoWeb'),
+    path('tecnologias', views.tecnologias_page_view, name='tecnologias'),
     path('quizz', views.quizz_view, name='quizz'),
     path('login', views.login_view, name='login'),
     path('logout', views.logout_view, name='logout'),

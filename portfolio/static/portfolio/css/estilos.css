@@ -545,6 +545,16 @@ footer p:last-child {
     height: auto;
 }
 
+.pwlink{
+    text-align: center;
+    padding: 1vw 8vw;
+}
+
+.pwclass{
+    text-align: center;
+    padding: 0vw 6vw;
+}
+
 /*--- vreificar ----*/
 .imgpw{
     width: 60%;
@@ -556,6 +566,36 @@ footer p:last-child {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+}
+
+/* -------------- Tecnologias existentes ---------------- */
+
+.paddingpagetecnologias{
+    padding: 1vw 8vw;
+}
+
+.containertecnologias {
+    display: flex;
+    background-color: rgb(245, 238, 206);
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2vw 3vw;
+}
+
+.containertecnologias div {
+    width: 90%;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.imgtec{
+    width: 20%;
+    height: auto;
+    float: left;
+    padding-right: 15px;
 }
 
 
