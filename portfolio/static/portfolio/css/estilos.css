@@ -638,6 +638,11 @@ footer p:last-child {
     padding: 0vw 8vw;
 }
 
+.tfcclasslink{
+    text-align: center;
+    padding: 1vw 8vw 2vw 8vw;
+}
+
 
 /* -------------- media query -------------- */
 
