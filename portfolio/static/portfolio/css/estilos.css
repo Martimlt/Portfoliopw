@@ -10,6 +10,20 @@
     text-align: center;
 }
 
+.centertext{
+    text-align: center;
+}
+
+.centervideo{
+    text-align: center;
+    padding: 2vw;
+}
+
+.videodef{
+    width: 560px;
+    height: 315px;
+}
+
 /* ------------ header -------------- */
 
 header {
@@ -911,6 +925,29 @@ footer p:last-child {
         background-color: white;
         border-radius: 10px;
         box-shadow: 5px 5px 15px grey;
+    }
+
+    .videodef{
+        width: 460px;
+        height: 330px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .videodef{
+        width: 350px;
+        height: 270px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .videodef{
+        width: 290px;
+        height: 224px;
     }
 
 }
